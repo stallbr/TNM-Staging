@@ -6,7 +6,7 @@ This repository contains the official preprint and methodological details for:
 
 **Authors:** Rodrigo Stall, Gabriel Lino Garcia, João Paulo Papa  
 
-📄 **Preprint PDF:** [Download here](./YOUR_PAPER_FILENAME.pdf)
+📄 **Preprint PDF:** [Download here](./TNMCancer%20Staging%20with%20Large%20Language%20Models_%20Comparative%20Analysis%20of%20MedPrompt%20%20and%20Other%20Structured%20Prompting%20Techniques.pdf)
 
 ---
 
