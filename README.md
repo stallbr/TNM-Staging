@@ -76,7 +76,10 @@ The LLM performs the following structured steps:
 This structured decomposition mirrors real-world oncological reasoning while maintaining full alignment with AJCC guidelines.
 
 
-![Approach B](Approach%20B.png)
+<p align="center">
+  <img src="approach_b.png" width="700">
+</p>
+
 
 📩 Contact
 
