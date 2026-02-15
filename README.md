@@ -22,7 +22,7 @@ automated TNM cancer staging.
 
 ## 📊 Model Architecture
 
-![Model Architecture](Approach B.png)
+![Approach B](Approach%20B.png)
 
 📩 Contact
 
