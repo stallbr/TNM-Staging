@@ -39,7 +39,7 @@ Our findings highlight the critical role of domain-specific structured prompting
 # 🧠 MedPrompt – Advanced Structured Prompting for Medical AI
 
 <p align="center">
-  <img src="Medprompt.png" width="600">
+  <img src="Medprompt.png" width="800">
 </p>
 
 MedPrompt is an advanced prompting framework designed to enhance the performance of LLMs in medical reasoning tasks.
@@ -75,7 +75,7 @@ This is particularly beneficial for complex clinical classification tasks.
 # 🧠 Approach A – Self-Generated AJCC Rule Framework
 
 <p align="center">
-  <img src="Approach A.png" width="600">
+  <img src="Approach A.png" width="800">
 </p>
 
 Approach A replicates the structured reasoning process typically followed by oncologists when assigning TNM classifications.
@@ -96,7 +96,7 @@ The goal is to simulate expert clinical reasoning under constrained prompting.
 # 🧠 Approach B – AJCC-Guided Structured TNM Framework
 
 <p align="center">
-  <img src="Approach B.png" width="600">
+  <img src="Approach B.png" width="800">
 </p>
 
 Approach B follows a similar sequential reasoning structure as Approach A but explicitly injects official AJCC staging rules into the prompt.
