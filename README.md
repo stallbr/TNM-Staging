@@ -22,6 +22,110 @@ automated TNM cancer staging.
 
 ## 📊 Model Architecture
 
+## 🧠 MedPrompt – Advanced Structured Prompting for Medical AI
+
+MedPrompt is an advanced prompting framework specifically designed to enhance the performance of Large Language Models (LLMs) in medical tasks.
+
+It integrates a combination of state-of-the-art techniques, including:
+
+- K-Nearest Neighbors (KNN)  
+- Few-Shot Learning  
+- Self-Generated Chain-of-Thought  
+- Self-Consistency  
+
+---
+
+### 🔎 Core Mechanism
+
+At its core, MedPrompt adapts the model’s input to leverage both contextual and example-driven learning.
+
+It operates as follows:
+
+#### 1️⃣ Contextual Example Retrieval (KNN)
+Relevant examples are embedded within the prompt using a K-Nearest Neighbors approach to select cases most similar to the current task.  
+This ensures the model is informed by contextually relevant clinical data.
+
+#### 2️⃣ Structured Reasoning (Chain-of-Thought)
+The integration of Chain-of-Thought allows the model to:
+- Articulate reasoning step-by-step  
+- Improve interpretability  
+- Generate logically coherent outputs  
+
+#### 3️⃣ Self-Consistency Aggregation
+Multiple outputs are generated and aggregated to identify the most consistent and reliable prediction.  
+This reduces variability and improves decision robustness.
+
+---
+
+### 🔀 Options Shuffling Strategy
+
+A notable aspect of MedPrompt is its use of **options shuffling**, which dynamically adjusts the prompt by altering the structure of the provided options.
+
+This enhances accuracy by:
+- Preventing positional bias  
+- Encouraging deeper reasoning  
+- Forcing evaluation from multiple perspectives  
+
+This is particularly effective in tasks involving complex medical reasoning.
+
+---
+
+### 🎯 Combined Effect
+
+The integration of example retrieval, structured reasoning, and self-consistency results in:
+
+- Significant improvements in medical prediction accuracy  
+- Reduced hallucination rates  
+- Increased reliability and consistency  
+- Contextually appropriate outputs  
+
+MedPrompt’s holistic approach blends data-driven and reasoning-based techniques, making it highly effective for precision-critical medical applications such as TNM cancer staging.
+
+## 🧠 Approach A – Self-Generated AJCC Rule Framework
+
+Approach A aims to replicate the steps commonly followed by an oncologist when classifying a TNM cancer stage.
+
+The method proceeds sequentially:
+1. Identifying the cancer location  
+2. Applying AJCC staging rules specific to that location  
+
+The structured workflow consists of the following steps:
+
+---
+
+### 🔎 Structured Workflow
+
+#### 1️⃣ Prompt Initialization  
+The LLM is provided with a general prompt containing contextual information about TNM cancer staging to establish domain grounding.
+
+#### 2️⃣ Cancer Location Identification  
+The model is asked to identify the cancer location from the clinical pathology report.
+
+#### 3️⃣ Staging Rule Application (Self-Generated)  
+The LLM self-generates the AJCC staging rules relevant to the identified cancer location.
+
+The model relies on:
+- Internal knowledge
+- Reasoning abilities
+- Implicit understanding of AJCC guidelines  
+
+This approach does **not** use externally injected staging rules.
+
+#### 4️⃣ Chain-of-Thought Generation  
+The model generates a structured Chain-of-Thought to reason through the staging process, ensuring each classification step is logically justified.
+
+#### 5️⃣ Classification Generation  
+Finally, the model produces:
+- T (Tumor) classification  
+- N (Nodes) classification  
+- M (Metastasis) classification  
+
+Providing a complete TNM staging result.
+
+---
+
+This approach is designed to simulate the cognitive reasoning process of an oncologist, following a structured methodology to derive accurate and contextually appropriate TNM classifications.
+
 ## 🧠 Approach B – AJCC-Guided Structured TNM Framework
 
 In this approach, we replicate the steps typically used by oncologists for TNM cancer staging, similar to Approach A, but with a key distinction:
