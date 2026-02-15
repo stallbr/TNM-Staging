@@ -1,199 +1,162 @@
-## 📊 TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques
+# 📊 TNM Cancer Staging with Large Language Models  
+## Comparative Analysis of MedPrompt and Structured Prompting Techniques
 
-This repository contains the official preprint of the research article:
+This repository contains the official preprint and methodological details for:
 
-"TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques"
+**"TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques"**
 
-Authors: Rodrigo Stall, Gabriel Lino Garcia and João Paulo Papa
+**Authors:** Rodrigo Stall, Gabriel Lino Garcia, João Paulo Papa  
 
-📌 Abstract
+📄 **Preprint PDF:** [Download here](./YOUR_PAPER_FILENAME.pdf)
 
-TNM cancer staging is essential for assessing cancer severity, guiding treatment decisions, and predicting clinical outcomes. 
-This standardized system allows healthcare professionals to assess tumor progression and tailor treatment strategies accordingly.
-Although large language models (LLMs) show promise in automating TNM staging, their clinical reliability depends on strict ad-
-herence to oncological guidelines. This study evaluates the performance of three LLMs—GPT-4-o mini, LLaMA 3.3 70B Instruct,
-and DeepSeek-R1-Distill-LLaMA-70B—in classifying TNM stages across 1,000 TCGA pathology reports from 33 cancer types.
-We compare traditional prompting techniques, including Zero-Shot and Zero-Shot with Chain-of-Thought, with the specialized
-MedPrompt and two novel methodologies: Approach A, which mimics the step-by-step reasoning process of medical profession-
-als using self-generated staging rules, and Approach B, which follows the same structured process while explicitly integrating
-AJCC guidelines. Our findings show that Approach B achieved state-of-the-art results in the N and M categories, with N macro
-average precision reaching 0.88 and M macro average precision reaching 0.91. Additionally, MedPrompt achieved the highest
-mean macro average precision across the three TNM categories, with a score of 0.867. These findings highlight the critical role of
-domain-specific structured prompting in improving LLM accuracy, minimizing hallucinations, and ensuring clinical reliability in
-automated TNM cancer staging.
+---
 
-## 📊 Model Architecture
+## 📌 Abstract
 
-## 🧠 MedPrompt – Advanced Structured Prompting for Medical AI
+TNM cancer staging is essential for assessing cancer severity, guiding treatment decisions, and predicting clinical outcomes. This standardized system enables clinicians to evaluate tumor progression and determine appropriate therapeutic strategies.
+
+Although Large Language Models (LLMs) show promise in automating TNM staging, their clinical reliability depends on strict adherence to oncological guidelines. This study evaluates the performance of three LLMs—GPT-4o-mini, LLaMA 3.3 70B Instruct, and DeepSeek-R1-Distill-LLaMA-70B—in classifying TNM stages across 1,000 TCGA pathology reports spanning 33 cancer types.
+
+We compare traditional prompting strategies (Zero-Shot and Zero-Shot with Chain-of-Thought) with:
+
+- **MedPrompt**
+- **Approach A** – Self-Generated AJCC Rule Framework
+- **Approach B** – AJCC-Guided Structured Framework
+
+Our findings highlight the critical role of domain-specific structured prompting in improving LLM accuracy, minimizing hallucinations, and ensuring clinical reliability in automated TNM cancer staging.
+
+---
+
+# 📑 Repository Overview
+
+- 🧠 MedPrompt Framework  
+- 🧠 Approach A – Self-Generated Rule Strategy  
+- 🧠 Approach B – AJCC-Guided Structured Strategy  
+- 📊 Experimental Setup  
+- 📈 Results (To Be Updated)  
+- 📩 Contact  
+
+---
+
+# 🧠 MedPrompt – Advanced Structured Prompting for Medical AI
 
 <p align="center">
-  <img src="Medprompt.png" width="800">
+  <img src="Medprompt.png" width="600">
 </p>
 
-MedPrompt is an advanced prompting framework specifically designed to enhance the performance of Large Language Models (LLMs) in medical tasks.
+MedPrompt is an advanced prompting framework designed to enhance the performance of LLMs in medical reasoning tasks.
 
-It integrates a combination of state-of-the-art techniques, including:
+It integrates multiple state-of-the-art techniques:
 
-- K-Nearest Neighbors (KNN)  
-- Few-Shot Learning  
-- Self-Generated Chain-of-Thought  
-- Self-Consistency  
+- K-Nearest Neighbors (KNN)
+- Few-Shot Learning
+- Self-Generated Chain-of-Thought
+- Self-Consistency Aggregation
 
-At its core, MedPrompt adapts the model’s input to leverage both contextual and example-driven learning.
-
-It operates as follows:
+### 🔎 Core Mechanism
 
 #### 1️⃣ Contextual Example Retrieval (KNN)
-Relevant examples are embedded within the prompt using a K-Nearest Neighbors approach to select cases most similar to the current task.  
-This ensures the model is informed by contextually relevant clinical data.
+Relevant examples are retrieved using similarity-based selection and embedded directly into the prompt to provide contextual grounding.
 
 #### 2️⃣ Structured Reasoning (Chain-of-Thought)
-The integration of Chain-of-Thought allows the model to:
-- Articulate reasoning step-by-step  
-- Improve interpretability  
-- Generate logically coherent outputs  
+The model generates step-by-step reasoning to improve interpretability and logical coherence.
 
-#### 3️⃣ Self-Consistency Aggregation
-Multiple outputs are generated and aggregated to identify the most consistent and reliable prediction.  
-This reduces variability and improves decision robustness.
+#### 3️⃣ Self-Consistency
+Multiple candidate outputs are generated and aggregated to select the most consistent prediction, reducing variability and hallucination risk.
 
 ---
 
 ### 🔀 Options Shuffling Strategy
 
-A notable aspect of MedPrompt is its use of **options shuffling**, which dynamically adjusts the prompt by altering the structure of the provided options.
+MedPrompt incorporates a dynamic options shuffling mechanism that alters answer ordering to mitigate positional bias and encourage deeper reasoning.
 
-This enhances accuracy by:
-- Preventing positional bias  
-- Encouraging deeper reasoning  
-- Forcing evaluation from multiple perspectives  
-
-This is particularly effective in tasks involving complex medical reasoning.
+This is particularly beneficial for complex clinical classification tasks.
 
 ---
 
-### 🎯 Combined Effect
-
-The integration of example retrieval, structured reasoning, and self-consistency results in:
-
-- Significant improvements in medical prediction accuracy  
-- Reduced hallucination rates  
-- Increased reliability and consistency  
-- Contextually appropriate outputs  
-
-MedPrompt’s holistic approach blends data-driven and reasoning-based techniques, making it highly effective for precision-critical medical applications such as TNM cancer staging.
-
-## 🧠 Approach A – Self-Generated AJCC Rule Framework
+# 🧠 Approach A – Self-Generated AJCC Rule Framework
 
 <p align="center">
-  <img src="Approach A.png" width="800">
+  <img src="Approach A.png" width="600">
 </p>
 
-Approach A aims to replicate the steps commonly followed by an oncologist when classifying a TNM cancer stage.
+Approach A replicates the structured reasoning process typically followed by oncologists when assigning TNM classifications.
 
-The method proceeds sequentially:
-1. Identifying the cancer location  
-2. Applying AJCC staging rules specific to that location  
+### 🔎 Workflow
 
-The structured workflow consists of the following steps:
+1. **Cancer Location Identification**
+2. **Self-Generation of AJCC Staging Rules**
+3. **Structured Chain-of-Thought Reasoning**
+4. **Final TNM Classification (T, N, M)**
 
----
+This strategy relies exclusively on the model’s internal knowledge to reconstruct AJCC criteria without external rule injection.
 
-### 🔎 Structured Workflow
-
-#### 1️⃣ Prompt Initialization  
-The LLM is provided with a general prompt containing contextual information about TNM cancer staging to establish domain grounding.
-
-#### 2️⃣ Cancer Location Identification  
-The model is asked to identify the cancer location from the clinical pathology report.
-
-#### 3️⃣ Staging Rule Application (Self-Generated)  
-The LLM self-generates the AJCC staging rules relevant to the identified cancer location.
-
-The model relies on:
-- Internal knowledge
-- Reasoning abilities
-- Implicit understanding of AJCC guidelines  
-
-This approach does **not** use externally injected staging rules.
-
-#### 4️⃣ Chain-of-Thought Generation  
-The model generates a structured Chain-of-Thought to reason through the staging process, ensuring each classification step is logically justified.
-
-#### 5️⃣ Classification Generation  
-Finally, the model produces:
-- T (Tumor) classification  
-- N (Nodes) classification  
-- M (Metastasis) classification  
-
-Providing a complete TNM staging result.
+The goal is to simulate expert clinical reasoning under constrained prompting.
 
 ---
 
-This approach is designed to simulate the cognitive reasoning process of an oncologist, following a structured methodology to derive accurate and contextually appropriate TNM classifications.
-
-## 🧠 Approach B – AJCC-Guided Structured TNM Framework
+# 🧠 Approach B – AJCC-Guided Structured TNM Framework
 
 <p align="center">
-  <img src="Approach B.png" width="800">
+  <img src="Approach B.png" width="600">
 </p>
 
-In this approach, we replicate the steps typically used by oncologists for TNM cancer staging, similar to Approach A, but with a key distinction:
+Approach B follows a similar sequential reasoning structure as Approach A but explicitly injects official AJCC staging rules into the prompt.
 
-Instead of generating the AJCC Classification Staging Rules, we provide them directly to the model.
+### 🔎 Workflow
 
-This ensures stricter control over the staging criteria and significantly reduces hallucination risks.
+1. **Cancer Type Classification**
+2. **Explicit AJCC Rule Injection**
+3. **Few-Shot Example Conditioning**
+4. **Structured Clinical Decomposition**
+5. **Chain-of-Thought Reasoning**
+6. **Final TNM Assignment**
 
-Additionally, the LLM is instructed to:
-- Summarize the clinical case
-- Identify tumor size
-- Reason through each TNM component
-- Generate a structured Chain-of-Thought
+### 🏥 Clinical Decomposition Pipeline
+
+The model is instructed to:
+
+- Generate a structured summary of the clinical case
+- Identify tumor size and relevant factors
+- Reason independently for T, N, and M categories
+- Produce a self-guided reasoning trace
 - Assign final TNM classifications
 
----
-
-### 🔎 Structured Workflow
-
-#### 1️⃣ Cancer Category Classification
-A dedicated LLM classifier first identifies the cancer location based on AJCC Cancer Staging Manual categories.
-
-#### 2️⃣ Staging Rules Input
-Once the cancer type is identified, the corresponding AJCC staging rules are explicitly provided to the model.
-
-This guarantees:
-- Strict rule adherence  
-- Controlled decision boundaries  
-- Reduced hallucinations compared to self-generated rule strategies  
-
-#### 3️⃣ Few-Shot Examples Input
-Cancer-specific few-shot examples are included to guide reasoning and illustrate correct staging decisions.
+This methodology enforces strict guideline adherence while preserving interpretability and decision transparency.
 
 ---
 
-### 🏥 Clinical Case Analysis Pipeline
+# 📊 Experimental Setup
 
-The LLM performs the following structured steps:
+- **Dataset:** 1,000 TCGA pathology reports  
+- **Cancer Types:** 33 distinct tumor locations  
+- **Models Evaluated:**
+  - GPT-4o-mini
+  - LLaMA 3.3 70B Instruct
+  - DeepSeek-R1-Distill-LLaMA-70B
+- **Evaluation Metric:** Macro Average Precision per TNM category  
 
-1. Generate a summary of the clinical case  
-2. Identify tumor size  
-3. Provide reasoning for the **T stage** classification  
-4. Provide reasoning for the **N stage** classification  
-5. Provide reasoning for the **M stage** classification  
-6. Generate a self-guided Chain-of-Thought  
-7. Assign the final **T classification**  
-8. Assign the final **N classification**  
-9. Assign the final **M classification**
+All experiments were conducted under controlled prompting configurations to ensure methodological fairness across strategies.
 
 ---
 
-This structured decomposition mirrors real-world oncological reasoning while maintaining full alignment with AJCC guidelines.
+# 📈 Results
 
+🚧 *Results section will be updated with full quantitative comparison tables.*
 
-## 📩 Contact
+This section will include:
 
-Rodrigo Stall
+- Macro Average Precision per TNM component (T, N, M)
+- Mean Macro Average
+- Comparative performance across prompting strategies
+- Error analysis and hallucination rate comparison
 
-rodrigo.stall.sikora@gmail.com
+---
 
-Data Scientist and Machine Learning Engineer
+# 📩 Contact
+
+**Rodrigo Stall**  
+
+📧 rodrigo.stall.sikora@gmail.com  
+
+Data Scientist | Machine Learning Engineer
