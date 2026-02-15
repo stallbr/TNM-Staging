@@ -2,7 +2,7 @@
 
 This repository contains the official preprint and methodological details for:
 
-**"TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques"**
+**TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques**
 
 **Authors:** Rodrigo Stall, Gabriel Lino Garcia, João Paulo Papa  
 
