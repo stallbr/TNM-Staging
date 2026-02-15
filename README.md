@@ -1,4 +1,4 @@
-## 📊 TNM Cancer Staging Using LLMs and Innovative Prompting Techniques
+## 📊 TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques
 
 This repository contains the official preprint of the research article:
 
@@ -190,7 +190,7 @@ The LLM performs the following structured steps:
 This structured decomposition mirrors real-world oncological reasoning while maintaining full alignment with AJCC guidelines.
 
 
-📩 Contact
+## 📩 Contact
 
 Rodrigo Stall
 
