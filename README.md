@@ -4,6 +4,8 @@ This repository contains the official preprint of the research article:
 
 "TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques"
 
+Authors: Rodrigo Stall, Gabriel Lino Garcia and João Paulo Papa
+
 📌 Abstract
 
 TNM cancer staging is essential for assessing cancer severity, guiding treatment decisions, and predicting clinical outcomes. 
@@ -32,10 +34,6 @@ It integrates a combination of state-of-the-art techniques, including:
 - Few-Shot Learning  
 - Self-Generated Chain-of-Thought  
 - Self-Consistency  
-
----
-
-### 🔎 Core Mechanism
 
 At its core, MedPrompt adapts the model’s input to leverage both contextual and example-driven learning.
 
