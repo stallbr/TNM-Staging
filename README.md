@@ -18,6 +18,10 @@ mean macro average precision across the three TNM categories, with a score of 0.
 domain-specific structured prompting in improving LLM accuracy, minimizing hallucinations, and ensuring clinical reliability in
 automated TNM cancer staging.
 
+## 📊 Model Architecture
+
+![Model Architecture](Approach B.png)
+
 📩 Contact
 
 Rodrigo Stall
