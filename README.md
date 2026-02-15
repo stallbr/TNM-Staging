@@ -140,14 +140,17 @@ All experiments were conducted under controlled prompting configurations to ensu
 
 # 📈 Results
 
-🚧 *Results section will be updated with full quantitative comparison tables.*
+<p align="center">
+  <img src="Resultados.png" width="800">
+</p>
 
-This section will include:
+The results demonstrate that structured prompting significantly improves TNM classification performance across all evaluated models.
 
-- Macro Average Precision per TNM component (T, N, M)
-- Mean Macro Average
-- Comparative performance across prompting strategies
-- Error analysis and hallucination rate comparison
+Compared to Zero-Shot baselines, both MedPrompt and the proposed structured approaches consistently achieved higher macro-average precision, particularly in the N and M categories. Approach B showed strong stability in nodal (N) classification, reaching 0.88, while MedPrompt achieved the highest overall macro-average performance (up to 0.867).
+
+Across architectures, injecting domain-specific AJCC rules and enforcing structured reasoning reduced variability and improved robustness, especially in metastasis (M) prediction.
+
+Overall, these findings confirm that domain-adaptive structured prompting plays a crucial role in enhancing accuracy, interpretability, and clinical reliability in automated TNM staging.
 
 ---
 
