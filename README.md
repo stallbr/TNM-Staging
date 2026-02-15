@@ -27,5 +27,7 @@ automated TNM cancer staging.
 📩 Contact
 
 Rodrigo Stall
+
 rodrigo.stall.sikora@gmail.com
+
 Data Scientist and Machine Learning Engineer
