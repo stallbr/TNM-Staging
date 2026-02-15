@@ -1,5 +1,4 @@
 # 📊 TNM Cancer Staging with Large Language Models  
-## Comparative Analysis of MedPrompt and Structured Prompting Techniques
 
 This repository contains the official preprint and methodological details for:
 
