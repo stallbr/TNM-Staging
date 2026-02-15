@@ -159,5 +159,6 @@ Overall, these findings confirm that domain-adaptive structured prompting plays 
 **Rodrigo Stall**  
 
 📧 rodrigo.stall.sikora@gmail.com  
+LinkedIn: https://www.linkedin.com/in/rodrigo-stall-sikora-01370699/
 
 Data Scientist | Machine Learning Engineer
