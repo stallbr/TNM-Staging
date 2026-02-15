@@ -2,9 +2,6 @@ This repository contains the official preprint of the research article:
 
 "TNM Cancer Staging with Large Language Models: Comparative Analysis of MedPrompt and Other Structured Prompting Techniques"
 
-📄 Full paper (PDF):
-https://drive.google.com/file/d/1Vn0Wi5Ps_6zmOqlpQQFmUS-IEIO3Q7wG/view
-
 📌 Abstract
 
 TNM cancer staging is essential for assessing cancer severity, guiding treatment decisions, and predicting clinical outcomes. 
