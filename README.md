@@ -27,7 +27,7 @@ automated TNM cancer staging.
 ## 🧠 MedPrompt – Advanced Structured Prompting for Medical AI
 
 <p align="center">
-  <img src="Medprompt.png" width="600">
+  <img src="Medprompt.png" width="800">
 </p>
 
 MedPrompt is an advanced prompting framework specifically designed to enhance the performance of Large Language Models (LLMs) in medical tasks.
@@ -86,7 +86,7 @@ MedPrompt’s holistic approach blends data-driven and reasoning-based technique
 ## 🧠 Approach A – Self-Generated AJCC Rule Framework
 
 <p align="center">
-  <img src="Approach A.png" width="600">
+  <img src="Approach A.png" width="800">
 </p>
 
 Approach A aims to replicate the steps commonly followed by an oncologist when classifying a TNM cancer stage.
@@ -135,7 +135,7 @@ This approach is designed to simulate the cognitive reasoning process of an onco
 ## 🧠 Approach B – AJCC-Guided Structured TNM Framework
 
 <p align="center">
-  <img src="Approach B.png" width="600">
+  <img src="Approach B.png" width="800">
 </p>
 
 In this approach, we replicate the steps typically used by oncologists for TNM cancer staging, similar to Approach A, but with a key distinction:
